@@ -83,7 +83,7 @@ describe.only("Negative scenarios", () => {
     const text = helpers.makeString(25);
     await page.type(selectors.firstName, text);
     await page.click(selectors.suggestMaleRapNameBtn);
-    const errorText = await page.textContent(selectors.errMsg); //? what here
+    const errorText = await page.textContent(selectors.errMsg);
     expect(errorText).toBe("You must enter your first name.");
   });
 
@@ -91,7 +91,7 @@ describe.only("Negative scenarios", () => {
     const initial = helpers.makeInitial();
     await page.fill(selectors.lastInitial, initial);
     await page.press(selectors.lastInitial, "Enter");
-    const errorText = await page.textContent(selectors.errMsg); //? what here
+    const errorText = await page.textContent(selectors.errMsg);
     expect(errorText).toBe("You must enter your first name.");
   });
 
@@ -99,7 +99,7 @@ describe.only("Negative scenarios", () => {
     const text = helpers.makeSymbolString(10);
     await page.type(selectors.firstName, text);
     await page.click(selectors.suggestMaleRapNameBtn);
-    const errorText = await page.textContent(selectors.errMsg); //? what here
+    const errorText = await page.textContent(selectors.errMsg); 
     expect(errorText).toBe("You must enter your first name.");
   });
 
