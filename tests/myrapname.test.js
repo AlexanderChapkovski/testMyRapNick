@@ -122,7 +122,7 @@ describe.only("Negative scenarios", () => {
 
   it("Verify that input field name doesn't accept name having symbols", async () => {
     const name = faker.name.firstName(0);
-	const symbol = helpers.makeSymbolString(2)
+    const symbol = helpers.makeSymbolString(2)
     await page.fill(selectors.firstName, `${name + symbol}`);
     await page.click(selectors.suggestMaleRapNameBtn);
     const errorText = await page.textContent(selectors.errMsg);
