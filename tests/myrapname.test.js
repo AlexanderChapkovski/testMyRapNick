@@ -67,7 +67,7 @@ describe("Postive scenarios", () => {
 
 //* below are some negative testing scenarios for this particular web page, and we can create much more depending of requirements
 
-describe.only("Negative scenarios", () => {
+describe("Negative scenarios", () => {
   beforeEach(async () => {
     await page.goto("https://www.myrapname.com/");
   });
